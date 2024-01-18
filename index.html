@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">To-Do List</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="form">
+        <form id="activityForm">
+            <label for="activity">New Activity:</label>
+            <input type="text" id="activity" name="activity" required>
+            <button type="button" id="addActivity">Add Activity</button>
+        </form>
+    </section>
+    <section class="filter">
+        <label for="statusFilter">Filter by Status:</label>
+        <select id="statusFilter" onchange="applyFilter()">
+            <option value="all">All</option>
+            <option value="incomplete">Incomplete</option>
+            <option value="done">Done</option>
+        </select>
+    </section>
+    <section class="list">
+        <div id="todolist"></div>
+    </section>
+</body>
+</html>
